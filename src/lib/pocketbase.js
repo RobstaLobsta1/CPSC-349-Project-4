@@ -10,7 +10,7 @@ export async function getExpenses() {
 }
 
 export async function createExpense(name, amount, category) {
-    const data={expense_name: name, expense_amount: amount, Category: category}
+    const data={name: name, amount: amount, category: category}
     await client.collection("expenses").create(data);
 }
 
